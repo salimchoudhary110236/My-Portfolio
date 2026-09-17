@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Salim Choudhary — Full Stack Developer portfolio. MERN stack, responsive web apps, and software projects.">
+<title>Salim Choudhary | Full Stack Developer</title>
+<style>
+:root{--bg:#0b1020;--panel:#121a2d;--text:#f4f7ff;--muted:#aab6ce;--blue:#4f8cff;--line:#25324a;--white:#fff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;background:#f6f8fc;color:#172033;line-height:1.6}
+a{color:inherit;text-decoration:none}.container{width:min(1100px,92%);margin:auto}
+header{position:sticky;top:0;z-index:5;background:rgba(11,16,32,.95);backdrop-filter:blur(12px);color:var(--text);border-bottom:1px solid #1c2940}
+.nav{height:74px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{font-weight:800;font-size:1.2rem;letter-spacing:-.03em}.brand span,.accent{color:var(--blue)}
+nav{display:flex;gap:26px;font-size:.94rem;color:#d4dced}nav a:hover{color:#75a7ff}.menu{display:none}
+.hero{background:radial-gradient(ellipse at 75% 20%,#1a2d50 0,transparent 42%),var(--bg);color:var(--text);padding:94px 0 100px}
+.hero-grid{display:grid;grid-template-columns:1.2fr .8fr;align-items:center;gap:55px}.eyebrow{display:inline-flex;border:1px solid #344766;background:#17243b;border-radius:999px;padding:6px 13px;color:#c8d7f2;font-size:.9rem}
+h1{font-size:clamp(2.6rem,6vw,4.8rem);line-height:1.05;letter-spacing:-.055em;margin:22px 0 12px}.role{font-size:clamp(1.4rem,3vw,2rem);color:#c6d3e8;margin:0 0 20px}.hero p{color:#b8c5dc;max-width:610px;font-size:1.08rem}
+.actions{display:flex;flex-wrap:wrap;gap:13px;margin-top:28px}.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 19px;border-radius:10px;font-weight:700;border:1px solid #3c4d69;transition:.2s}.btn.primary{background:var(--blue);border-color:var(--blue);color:white}.btn:hover{transform:translateY(-2px);filter:brightness(1.08)}
+.portrait{min-height:330px;display:grid;place-items:center;position:relative}.portrait-frame{width:min(310px,100%);aspect-ratio:1/1.08;border-radius:28px;border:1px solid #435574;background:linear-gradient(145deg,#263a5c,#121a2b);display:grid;place-items:center;box-shadow:20px 20px 0 #172744;overflow:hidden}.initials{font-size:6rem;font-weight:900;letter-spacing:-.08em;color:#91b9ff}.portrait-note{position:absolute;right:-4px;bottom:14px;background:#17243b;border:1px solid #334765;border-radius:14px;padding:12px 16px;color:#dbe7ff;font-weight:700}
+section{padding:78px 0}.section-head{margin-bottom:30px}.kicker{color:var(--blue);font-weight:800;text-transform:uppercase;letter-spacing:.14em;font-size:.78rem}.section-head h2{font-size:2.15rem;letter-spacing:-.04em;margin:4px 0 8px}.section-head p{color:#64718a;margin:0;max-width:680px}
+.about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:35px;align-items:start}.about-copy{font-size:1.05rem;color:#46536b}.facts{display:grid;gap:12px}.fact{padding:15px 17px;background:white;border:1px solid #e4e9f2;border-radius:13px;display:flex;justify-content:space-between;gap:15px}.fact strong{color:#202b40}.fact span{color:#61708a;text-align:right}
+.skills{background:#eef3fb}.skill-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.skill-card{background:white;border:1px solid #e0e7f2;border-radius:15px;padding:20px}.skill-card h3{margin:0 0 13px;font-size:1rem}.tags{display:flex;flex-wrap:wrap;gap:8px}.tag{font-size:.85rem;padding:6px 10px;border-radius:8px;background:#edf3ff;color:#31588f;font-weight:650}
+.projects-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.project{background:white;border:1px solid #e1e7f0;border-radius:17px;padding:24px;box-shadow:0 8px 25px #1a2b4608}.project-top{display:flex;align-items:center;justify-content:space-between;gap:12px}.project h3{margin:0;font-size:1.22rem}.project p{color:#61708a;margin:12px 0 17px}.project .tags{margin-bottom:18px}.project-label{font-size:.78rem;color:#5478b0;font-weight:800;text-transform:uppercase;letter-spacing:.08em}.project-link{color:#326fe0;font-weight:750}
+.timeline{border-left:2px solid #d7e2f4;padding-left:23px}.timeline-item{position:relative;margin:0 0 25px}.timeline-item:before{content:"";position:absolute;left:-30px;top:7px;width:12px;height:12px;border-radius:50%;background:var(--blue);box-shadow:0 0 0 4px #e8f0ff}.timeline-item h3{margin:0}.timeline-item .meta{color:#71809a;font-size:.92rem}.timeline-item p{color:#5e6b81;margin:8px 0}
+.contact{background:#0b1020;color:white}.contact .section-head p{color:#b2bfd5}.contact-card{display:flex;align-items:center;justify-content:space-between;gap:25px;padding:27px;border:1px solid #2a3a55;border-radius:17px;background:#121a2d}.contact-card p{color:#b8c5dc;margin:4px 0}.contact-links{display:flex;flex-wrap:wrap;gap:12px}.contact-links a{padding:10px 14px;border:1px solid #3a4b68;border-radius:9px;color:#e3ebfa}
+footer{background:#080c17;color:#93a1b9;padding:22px 0;font-size:.88rem}.footer-row{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+@media(max-width:800px){.hero-grid,.about-grid{grid-template-columns:1fr}.hero{padding:65px 0}.portrait{min-height:280px}.skill-grid{grid-template-columns:repeat(2,1fr)}.projects-grid{grid-template-columns:1fr}.contact-card{align-items:flex-start;flex-direction:column}}
+@media(max-width:560px){nav{gap:12px;font-size:.8rem}.nav{height:64px}.skill-grid{grid-template-columns:1fr}.fact{flex-direction:column;gap:2px}.fact span{text-align:left}.section-head h2{font-size:1.8rem}}
+</style>
+</head>
+<body>
+<header><div class="container nav">
+<a class="brand" href="#home">Salim <span>Choudhary</span></a>
+<nav aria-label="Main navigation"><a href="#home">Home</a><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#contact">Contact</a></nav>
+</div></header>
+<main>
+<section class="hero" id="home"><div class="container hero-grid">
+<div>
+<span class="eyebrow">👋 Hello, I'm</span>
+<h1>Salim <span class="accent">Choudhary</span></h1>
+<div class="role">Full Stack Developer</div>
+<p>I build responsive, user-friendly web experiences with modern web technologies. I enjoy turning ideas into useful applications, learning continuously, and solving problems through code.</p>
+<div class="actions"><a class="btn primary" href="#projects">Explore Projects ↗</a><a class="btn" href="#contact">Contact Me</a></div>
+</div>
+<div class="portrait" aria-label="Profile photo placeholder"><div class="portrait-frame"><div class="initials">SC</div></div><div class="portrait-note">Build. Learn. Improve.</div></div>
+</div></section>
+
+<section id="about"><div class="container">
+<div class="section-head"><div class="kicker">A little about me</div><h2>About Me</h2><p>Curious developer focused on building practical web applications and growing as an engineer.</p></div>
+<div class="about-grid"><div class="about-copy"><p>I'm Salim Choudhary, a Full Stack Developer with a Computer Science background and specialization in IoT. I completed my B.Tech in 2025 from Sunder Deep Engineering College, Dasna, Ghaziabad.</p><p>My interests include full-stack web development, clean UI, backend logic, and building projects that solve real problems. I'm looking for opportunities to contribute, learn from a team, and keep improving my craft.</p></div>
+<div class="facts">
+<div class="fact"><strong>Education</strong><span>B.Tech, Computer Science</span></div>
+<div class="fact"><strong>Specialization</strong><span>Internet of Things (IoT)</span></div>
+<div class="fact"><strong>College</strong><span>Sunder Deep Engineering College</span></div>
+<div class="fact"><strong>Graduated</strong><span>2025</span></div>
+<div class="fact"><strong>Location</strong><span>Muzaffarnagar, Uttar Pradesh</span></div>
+</div></div></div></section>
+
+<section class="skills" id="skills"><div class="container">
+<div class="section-head"><div class="kicker">What I work with</div><h2>Technical Skills</h2><p>Technologies and tools I have studied and used in learning or project work.</p></div>
+<div class="skill-grid">
+<div class="skill-card"><h3>Frontend</h3><div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span class="tag">React.js</span><span class="tag">Bootstrap</span><span class="tag">Tailwind CSS</span><span class="tag">jQuery</span></div></div>
+<div class="skill-card"><h3>Backend</h3><div class="tags"><span class="tag">Node.js</span><span class="tag">Express.js</span><span class="tag">Java</span></div></div>
+<div class="skill-card"><h3>Databases</h3><div class="tags"><span class="tag">MongoDB</span><span class="tag">SQL</span></div></div>
+<div class="skill-card"><h3>Tools & Practices</h3><div class="tags"><span class="tag">Git</span><span class="tag">GitHub</span><span class="tag">VS Code</span><span class="tag">CRUD</span><span class="tag">Responsive UI</span></div></div>
+</div></div></section>
+
+<section id="projects"><div class="container">
+<div class="section-head"><div class="kicker">Selected work</div><h2>Featured Projects</h2><p>A selection of projects and practice builds. Add verified repository and live-demo links when available.</p></div>
+<div class="projects-grid">
+<article class="project"><div class="project-top"><h3>Wanderlust — Rental App</h3><span class="project-label">Full Stack</span></div><p>A rental-listing web application concept with listing pages and database-backed content, built while learning the MERN stack.</p><div class="tags"><span class="tag">MongoDB</span><span class="tag">Express</span><span class="tag">Node.js</span><span class="tag">EJS</span></div><span class="project-link">Project link coming soon</span></article>
+<article class="project"><div class="project-top"><h3>Amazon UI Clone</h3><span class="project-label">Frontend</span></div><p>A practice e-commerce interface focused on page layout, styling, and interactive frontend fundamentals.</p><div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span></div><span class="project-link">Project link coming soon</span></article>
+<article class="project"><div class="project-top"><h3>Spotify UI Clone</h3><span class="project-label">Frontend</span></div><p>A music-streaming interface recreation to practice responsive layouts and visual styling.</p><div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span></div><span class="project-link">Project link coming soon</span></article>
+<article class="project"><div class="project-top"><h3>Healthcare Monitoring System</h3><span class="project-label">Academic</span></div><p>A mini-project concept for monitoring health readings, with a simple web interface and database-related work.</p><div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span class="tag">Bootstrap</span><span class="tag">SQL</span></div><span class="project-link">Project link coming soon</span></article>
+</div></div></section>
+
+<section id="experience" style="background:#f0f4fa"><div class="container">
+<div class="section-head"><div class="kicker">Learning through practice</div><h2>Experience & Education</h2></div>
+<div class="timeline">
+<div class="timeline-item"><h3>Full Stack Web Development Intern</h3><div class="meta">Wayspire Ed-Tech Pvt. Ltd. · 3 months</div><p>Worked on web development learning and practice, including responsive UI components, debugging, and CRUD/database integration concepts.</p></div>
+<div class="timeline-item"><h3>B.Tech — Computer Science (IoT)</h3><div class="meta">Sunder Deep Engineering College, Dasna, Ghaziabad · 2025</div><p>Completed undergraduate studies in Computer Science with a specialization in Internet of Things.</p></div>
+</div></div></section>
+
+<section class="contact" id="contact"><div class="container">
+<div class="section-head"><div class="kicker">Let's connect</div><h2>Have a project or opportunity?</h2><p>I'm open to entry-level developer opportunities, collaborations, and learning-focused teams.</p></div>
+<div class="contact-card"><div><h3 style="margin:0">Salim Choudhary</h3><p>Full Stack Developer · Muzaffarnagar, Uttar Pradesh</p><p>salimchoudhary790@gmail.com</p></div><div class="contact-links"><a href="mailto:salimchoudhary790@gmail.com">Email me ↗</a><a href="https://www.linkedin.com/in/salim-choudhary-a698a325b/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a></div></div>
+</div></section>
+</main>
+<footer><div class="container footer-row"><span>© 2026 Salim Choudhary. All rights reserved.</span><span>Keep Learning · Keep Building · Keep Growing</span></div></footer>
+</body></html>
